@@ -1,0 +1,33 @@
+{% load staticfiles %}
+
+<script src="{% static "js/dojo-release-1.9.1/dojo/dojo.js" %}"></script>    
+<script src="{% static "js/jquery-1.11.0.min.js" %}"></script>    
+<script src="{% static "js/vlcPlayer.js" %}"></script>    
+<script src="{% static "js/qqemoji.js" %}"></script>  
+<script src="{% static "js/upclick-min.js" %}"></script>    
+<script src="{% static "js/guid.js" %}"></script>    
+<script src="{% static "js/weChat.js" %}"></script>    
+
+<link rel="stylesheet" href="{% static "css/chatTab.css" %}" />
+<link rel="stylesheet" href="{% static "css/emoji184f03.css" %}" />
+<link rel="stylesheet" href="{% static "js/dojo-release-1.9.1/dijit/themes/claro/claro.css" %}" />
+<link rel="stylesheet" href="{% static "css/qqemoji.css" %}" />
+</head>
+<body class="claro">
+
+    <div style="height: 200px;">
+        <div data-dojo-id="chatboardTab" data-dojo-type="dijit/layout/TabContainer" style="width: 600px;height: 100px;" doLayout="false">
+        
+       </div>
+    </div>
+    
+    <div id="invitation">
+        <div><span id="invitationSender"></span><span id="invitationRoomId"></span></div>
+        <a id="refuse" class="closeInvation chatSend" onclick='ackInvitation("false")' href="javascript:void(0);">拒绝</a>
+        <a id="accept" class="closeInvation chatSend" onclick='ackInvitation("true")' href="javascript:void(0);">接受</a>
+    </div>
+    
+    
+    <div id="vlcplayerholder" style="visibility:hedden;position:absolute;left:-500px;right:-500px"/>
+</body>
+</html>
